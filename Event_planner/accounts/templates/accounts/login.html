@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container text-center">
+        <div class="overlay p-5">
+            <h1 class="display-4 mb-4">Log-In</h1>
+            <form method="post">
+            {% csrf_token %}
+                <label for="username"></label>
+                <input class="form-control" type="text" name="username" placeholder="Enter username here">
+                <br><br>
+                <label for="password"></label>
+                <input class="form-control" name="password" placeholder="Enter your password here" type="password">
+                <br><br><br>
+                <button class="btn btn-submit btn-outline-light" type="submit" value="Login">login</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

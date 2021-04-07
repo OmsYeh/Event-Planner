@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    {% if form.errors %}
+        <ol>
+            {% for error in form.errors %}
+            <li><strong>{{ error|escape }}</strong></li>
+            {% endfor %}
+        </ol>
+    {% endif %}
+    <div class="container text-center">
+        <div class="overlay p-5">
+            <h1 class="display-4 mb-4">Sign-Up</h1>
+            <p class="lead">Enter your details below</p>
+            <form method="post">
+                {% csrf_token %}
+                <div class="row">
+                    {% for field in signup_form %}
+                        <div class="col-3 text-start mt-2">{{ field.label_tag }}</div>
+                        <div class="col-9 mt-2">{{ field }}</div>
+                    {% endfor %}
+                </div>
+                <button class="btn btn-submit btn-outline-light">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
