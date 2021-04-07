@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+{% block content %}
+
+
+    <div class="container text-center">
+        <div class="overlay p-5">
+            <h1 class="display-4 mb-4">Things needed for the party</h1>
+            <p class="lead">Enter the item name and we"ll add it to the list</p>
+            <form method="post">
+            {% csrf_token %}
+                <p class="form-element">{{ form.title|bootstrap }}</p>
+                <p class="form-element">{{ form.description|bootstrap }}</p>
+                <button class="btn btn-submit btn-outline-light">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="overlay p-5">
+            <h1 class="display-4 mb-4">Shopping List</h1>
+            <p class="lead">Here is everything that sin your list.</p>
+                {% for item in ShoppingList %}
+                    <ul class="list-group group-space">
+                        <li class="list-group-item group-color"><h4>Title: {{ item.title }}</h4></li>
+                        <li class="list-group-item group-color"><p>Description: {{ item.description }}</p></li>
+                    </ul>
+                {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+{#{% extends 'base.html' %}#}
+{#{% load static %}#}
+{#{% block content %}#}
+{#    <div class="container text-center">#}
+{#        <div class="overlay p-5">#}
+{#            <h1 class="display-4 mb-4">Shopping List</h1>#}
+{#            <p class="lead">Enter the guests name and email address then <br> we"ll automatically send them an email with the invite!</p>#}
+{#        </div>#}
+{#        <div class="col">#}
+{#            <div class="container">#}
+{#                <div class="row row-list">#}
+
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock content %}#}

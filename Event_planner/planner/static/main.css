@@ -1,0 +1,51 @@
+body {
+    color: #e1e7ea;
+    background-image: url("https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.navbar {
+    background-color: #e9d0cd;
+    color: #2a282e;
+}
+#searchbar {
+    background-color: transparent;
+    color: #2a282e;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.overlay {
+    margin-top: 100px;
+    left: 0;
+    min-height: 400px;
+    width: 70%;
+    background: rgba(51, 51, 51, 0.7);
+    border-radius: 8px;
+}
+
+.form-element {
+    margin-top: 50px;
+}
+
+.btn-submit {
+    margin-top: 2rem;
+    min-width: 100px;
+    /*width: 600px;*/
+    height: 50px;
+}
+
+.group-space {
+    margin: 10px;
+}
+
+.group-color {
+    color: #2a282e;
+}
+
+/*.carousel-inner{*/
+/*    margin*/
+/*}*/
