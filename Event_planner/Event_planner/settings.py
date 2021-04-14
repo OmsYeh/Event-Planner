@@ -23,7 +23,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # !----------security key to be replaced at this line----------!
-SECRET_KEY = 'm$qfacn2%vq5cok^+-bjcztr-^yhwr0n9hy_zo1z_(5wist)c5'
+# SECRET_KEY = 03
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -129,4 +129,4 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'user-login'
 
-EASY_MAPS_GOOGLE_KEY = 'AIzaSyAiqyA_m_vpAGigBzRYSnER2gCq-ftl54Q'
+# EASY_MAPS_GOOGLE_KEY = 02
