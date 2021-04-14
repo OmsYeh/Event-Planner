@@ -42,12 +42,18 @@ class GuestListView(CreateView):
         context['GuestList'] = EmailList.objects.all()
         return context
 
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.author = self.request.user
+        self.object.save()
+        return super(CreateView, self).form_valid(form)
+
 
 def location_picker(request):
     return render(request, 'components/location.html', {'title': 'Locations'})
 
 
-class ThemePickerView(ListView):
+class ThemePickerView(LoginRequiredMixin, ListView):
     model = ThemeList
     template_name = 'components/theme.html'
     success_url = reverse_lazy("theme")

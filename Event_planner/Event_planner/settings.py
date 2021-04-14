@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'planner',
     'bootstrapform',
     'accounts',
+    'django_google_maps',
 ]
 
 MIDDLEWARE = [
