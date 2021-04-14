@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'bootstrapform',
     'accounts',
     'django_google_maps',
+    'easy_maps',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_URL = 'user-login'
+
+EASY_MAPS_GOOGLE_KEY = 'AIzaSyAiqyA_m_vpAGigBzRYSnER2gCq-ftl54Q'
